@@ -1,0 +1,7 @@
+# .gitignore
+configApiKey.php
+configBD.interface.php
+web/.devcontainer/devcontainer.json
+web/ATT95023.htaccess
+web/docker-compose.yml
+web/Dockerfile
