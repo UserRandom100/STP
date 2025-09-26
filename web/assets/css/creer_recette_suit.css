@@ -1,0 +1,19 @@
+.remove-step {
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+.SousTitre {
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 100%;            /* Prend 100% de la largeur de son conteneur parent */
+    width: 450px;;
+    max-width: 900px;       /* Largeur maximale de 900px */
+    min-width: 200px;       /* Largeur minimale de 300px (ou la taille que vous préférez) */
+    box-sizing: border-box; /* Inclut padding et bordures dans le calcul de la largeur totale */
+    padding: 10px;          /* Un peu de padding pour l'intérieur du textarea */
+    font-size: 16px;        /* Taille de la police */
+}

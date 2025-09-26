@@ -1,0 +1,43 @@
+/* Berries and Cream Yogurt Parfait */
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+.form-container2 {
+    background-color: #fff6f2; 
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #e0aedcb8;
+    /* border: 2px solid #6BBDC6; */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%; 
+    margin: 50px auto; 
+    box-sizing: border-box;
+}
+
+.recipe-genere {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6BBDC6;
+    margin-bottom: 20px;
+}
+
+.form-container2 h2 {
+    opacity: 1;
+    color: #FF908D;  /* Exemple de couleur */
+    font-family: 'DynaPuff', cursive;
+    letter-spacing: 1px;
+}
+
+.form-container2 a {
+    opacity: 1;
+    color: #6BBDC6;  /* Exemple de couleur */
+}
+
+h3+ol, h3+ul {
+    color: #3f3d3dc8;
+    line-height: 1.6;
+    margin: 20px;
+}

@@ -1,0 +1,178 @@
+/* Basic CSS file */
+
+/* Colors */
+/*
+bleu = 6BBDC6;
+rose = FF908D OU #ff918d97 OU #ff918db9;
+orange = F89E32;
+beige = F7CD92;
+rose_bordure = e0aedcb8;
+bleu_background = #B0E0D3;
+orange_hover = #F89E32;
+
+ */   
+
+ /* html, body {
+    background-color: #F7CD92 !important;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #F7CD92 !important; */
+    /* background-color: #FFC1BF !important; */
+    background-color: #B0E0D3       !important;
+    
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form p {
+    color: #3f3d3dc8;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* body {
+    background-color: #B0E0D3;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><path fill="none" stroke="%23F89E32" stroke-width="4" d="M10 50 Q 150 150, 300 50 T 600 50 T 900 50" /><path fill="none" stroke="%236BBDC6" stroke-width="4" d="M0 150 Q 200 50, 400 150 T 800 150" /><path fill="none" stroke="%23FF908D" stroke-width="4" d="M20 300 Q 180 200, 360 300 T 720 300" /></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+
+
+/* Boulettes de viande */
+.boulettes {
+    position: absolute;
+    background-color: #8B4513; /* Marron foncé */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite alternate ease-in-out;
+    z-index: 0; /*en dessous du formulaire */
+}
+
+/* Position des boulettes */
+.boulette1 { top: 20%; left: 15%; }
+.boulette2 { top: 40%; left: 70%; }
+.boulette3 { top: 75%; left: 80%; }
+.boulette4 { top: 30%; left: 80%; }
+.boulette5 { top: 60%; left: 10%; }
+
+/* Animation des boulettes (effet de rebond) */
+@keyframes bounce {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); }
+}
+
+
+.form-container {
+    background-color: #ff918db9; 
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #e0aedcb8;
+    /* border: 2px solid #6BBDC6; */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; 
+    margin: 50px auto; 
+    box-sizing: border-box;
+}
+
+.SousTitre {
+    text-align: center;
+    font-weight: bold;
+    
+    font-size: 1.5rem;
+    background-color: #FF908D;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 3px dashed #6BBDC6;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: rotate(-2deg);
+    display: inline-block;
+}
+
+.formulaire {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blocFormulaire {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.blocFormulaire input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #6BBDC6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #F89E32;
+}
+
+#username{
+    margin: 10px;
+    display: block;
+}
+#password{
+    margin: 10px;
+    display: block;
+}
+#email{
+    margin: 10px;
+    display: block;
+}
+
+/* .Logo{
+    font-family: didot, serif;
+    font-size: 5rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #FF908D;
+    -webkit-text-stroke: 0.2px #6BBDC6;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 20px;
+} */

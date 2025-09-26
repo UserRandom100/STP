@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+/* font-family: 'Rouge Script', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+/* font-family: 'DynaPuff', cursive; */
+
+.board {
+    background-color: #fff6f2;
+    padding: 15px 23px;
+    color:#F89E32;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+.board input,
+.board textarea,
+.board select {
+    border: 1px solid #e4c2da;
+    border-radius: 10px;
+    /* letter-spacing: 0.05em; */
+}
+
+.board label {
+    /* font-family: 'DynaPuff', cursive; */
+    /* font-size: 1em; */
+    font-weight: 680;
+    letter-spacing: 0.01em;
+    color: #F89E32;
+}
+
+.board button {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}

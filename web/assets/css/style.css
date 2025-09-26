@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
+/* Colors
+
+rose_header : #F2E6E4;
+rose = FF908D OU #ff918d97 OU #ff918db9;
+roes_button_active : #ff918d98;
+button_hover : rose: #e7534e98; orange:  #F89E32;
+orange : #F89E32;
+
+bleu = 6BBDC6;
+rose = FF908D;
+orange = F89E32;
+beige = F7CD92;
+rose_bordure = e0aedcb8;
+bleu_background = #B0E0D3;
+orange_hover = #F89E32;
+
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+
+  /* Pour Footer */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Spaghettis ondulés en SVG */
+body {
+  background-color: #B0E0D3;
+  background-image: 
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><path fill="none" stroke="%23F89E32" stroke-width="4" d="M10 50 Q 150 150, 300 50 T 600 50 T 900 50"/></svg>'),
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><path fill="none" stroke="%236BBDC6" stroke-width="4" d="M0 150 Q 200 50, 400 150 T 800 150"/></svg>'),
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><path fill="none" stroke="%23FF908D" stroke-width="4" d="M20 300 Q 180 200, 360 300 T 720 300"/></svg>');
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
+button:hover {
+  background-color: #F89E32;
+}
+
+
+/**************************************************
+Header 
+**************************************************/
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #F2E6E4 ;
+  /* background-color: #6BBDC6; */
+  /* border-bottom: 1px solid #62add0; */
+  border-bottom: 1px solid #e0aedcb8;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Pour que le contenu soit au dessus de l'image de fond, 
+              des bouletters brunes */
+}
+
+.header-container {
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px 20px;
+  margin: 0 auto;
+  
+}
+
+/* .logo {
+  color:orangered;
+  font-family: 'Roboto', sans-serif;
+
+} */
+
+.Logo{
+  font-family: didot, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #FF908D;
+  -webkit-text-stroke: 0.2px #6BBDC6;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  /* text-align: center; */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  /* margin-top: 20px; */
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+/* Styles pour les éléments de la liste */
+header nav > ul {
+  display: flex; /* Utilisez flexbox pour un alignement similaire à la navbar */
+  gap: 20px;  /* Ajoutez de l'espace entre les éléments de la liste */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header nav > ul > li {
+  display: inline-block;
+  margin: 0;
+}
+
+/* Styles pour les liens dans la liste */
+header nav > ul > li > a {
+  display: inline-block;  /* Afin de pouvoir appliquer le padding et les styles de bouton */
+  padding: 10px 20px;  /* Identique aux boutons */
+  background-color: #FF908D; /* Couleur de fond similaire aux boutons */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px; /* Bordure arrondie pour ressembler à un bouton */
+  text-align: center; /* Centrer le texte */
+  white-space: nowrap;  /* Empêche le texte de se casser */
+  font-size: 16px; /* Taille de police identique */
+  cursor: pointer;  /* Curseur en forme de main */
+}
+
+/* Quand l'élément est actif (lien actif) */
+header nav > ul > li.active > a {
+  background-color: #ff918d98;  /* Couleur de fond différente pour l'élément actif */
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* Optionnel : un effet au survol des liens de la liste */
+header nav > ul > li > a:hover {
+  background-color: #e7534e98;
+}
+
+
+.nav-nom-connect{
+  color: #FF908D;
+  font-family: 'Charm', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  align-content: center;
+}
+
+
+
+
+/* 
+.navbar {
+  display: flex;
+  gap: 20px; 
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  padding: 0 0 1% 0;
+}
+
+.nav-button {
+  background-color: #FF908D;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+
+  width: 150px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nav-button:hover {
+  background-color: #e7534e98;
+}
+
+.nav-button.active {
+  background-color: #ff918d98;
+}  */
+
+
+
+
+
+
+.header-container .logo img {
+  height: 40px; 
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  header {
+      height: 100%;
+      width: 100%;
+  }
+
+  .header-container{
+    flex-direction: column;
+    flex-wrap: wrap;
+      /* Les éléments du menu peuvent 
+                          se réarragner vers le bas */
+  }
+
+  nav{
+    flex-direction: column;
+    /* stack les éléments de  menu verticalement */
+    width: 100%;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Les éléments de la liste prennent toute la largeur */
+    text-align: center;
+    /* Centrer le texte */
+  }	
+
+}
+/**************************************************
+End Header 
+**************************************************/
+
+/* **************************************************
+Footer
+**************************************************/
+main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: #F2E6E4;
+  border-top: 1px solid #e0aedcb8;
+  /* padding: 0 0 30px 0; */
+  box-sizing: border-box;
+
+  /* font-family: didot, serif; */
+  /* font-size: 1.8rem; */
+  font-weight: bold;
+  font-style: italic;
+  color: #FF908D;
+  -webkit-text-stroke: 0.2px #6BBDC6;
+  /* text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); */
+  /* text-transform: uppercase; */
+  letter-spacing: 3px;
+
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/**************************************************
+End Footer  
+**************************************************/   
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  position: relative;
+  z-index: 1; /* Pour que le contenu soit au dessus de l'image de fond, 
+              des bouletters brunes */
+}
+.background {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/**************************************************
+Flag Animation 
+**************************************************/   
+.flag-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Flag takes full width of the viewport */
+  height: 95vh; /* Flag takes full height of the viewport */
+  overflow: hidden;
+  z-index: 0; /* Make sure the flag stays in the background */
+  /* Make sure the flag stays in the background */
+}
+
+
+.flag {
+  border : 2px solid #e0aedcb8; /* Optional border for visibility */
+  /* border-radius: 10px; */ /* Optional rounded corners */
+  /* Optional shadow for depth */ 
+  box-shadow: 0 4px 10px rgba(216, 129, 187, 0.2);
+   
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    background: linear-gradient(45deg, #f2e6e483, #ff918d52, rgba(255, 192, 203, 0.548) , #FF908D, #eb8bc398); /* Custom flag colors */
+  transform-origin: top right; /* Anchor flag to the top right */
+  animation: flutter 3s ease-in-out infinite, waveFlag 15s ease-in-out infinite alternate;
+}
+
+@keyframes waveFlag {
+  0% {
+    transform: rotate(0deg) scaleX(1);
+  }
+  50% {
+    transform: rotate(10deg) scaleX(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scaleX(1);
+  }
+}
+
+@keyframes flutter {
+  0% {
+    transform: rotate(0deg) scaleX(1) translateX(0);
+  }
+  25% {
+    transform: rotate(3deg) scaleX(1.05) translateX(5px);
+  }
+  50% {
+    transform: rotate(0deg) scaleX(1) translateX(5px);
+  }
+  75% {
+    transform: rotate(-3deg) scaleX(1.05) translateX(-5px);
+  }
+  100% {
+    transform: rotate(0deg) scaleX(1) translateX(0);
+  }
+}
+
+
+/**************************************************
+Transition de la page lors de l'entrée et la sortie
+**************************************************/   
+
+/* 
+.container {
+  transition: opacity 0.5s ease; 
+}
+
+.flag-container{
+  transition: opacity 0.5s ease; 
+}
+.page-exit {
+  opacity: 0;
+  transform: translateY(-100%);
+} */
+
+
+/* .container,  */
+.flag-container {
+  opacity: 0;  /* Initialement invisible */
+  transition: opacity 1s ease; /* Durée de la transition */
+}
+
+.page-enter {
+  opacity: 1;  /* Lorsque la page entre, on rétablit l'opacité à 1 */
+}
+
+.page-exit {
+  opacity: 0;  /* Lorsque la page sort, on diminue l'opacité à 0 */
+}

@@ -1,0 +1,108 @@
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+.SousTitre {
+    font-family: 'Rouge Script', cursive;
+    font-size: 2.5em;
+    color: white; /* Couleur du texte */
+    letter-spacing: 0.05em; /* Espacement entre les lettres */
+    text-align: center; /* Centrer le texte */
+    margin-top: 20px; /* Espacement au-dessus du texte */
+    margin-bottom: 20px; /* Espacement en dessous du texte */
+}
+/* Forme du biscuit avec bords ondulés */
+.board {
+    position: relative;
+    background-color: white; /* Couleur biscuit beige clair */
+    padding: 30px 40px; /* Un peu de padding pour le contenu */
+    color: #FF908D ;
+    /* #F89E32 */
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: 12px; /* Coins légèrement arrondis pour ressembler à un biscuit */
+    
+    /* Ombres : externe (en bas à droite), interne, et une ombre supplémentaire en haut à gauche */
+    box-shadow:
+        200px 150px 600px #ff918db9,
+        /* Ombre externe */
+        inset 0 0 100px #ff918d62,
+        /* Ombre interne */
+        -100px -150px 600px #ffd38db1;
+        /* Ombre en haut à gauche */
+
+        /* font-family: 'Quicksand', sans-serif; */
+        font-family: 'DynaPuff', cursive;
+}
+
+/* Pseudo-élément pour créer des bords ondulés */
+.board::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #f4d1a0; /* Même couleur que le biscuit */
+    border-radius: 50%; /* Forme arrondie pour les vagues */
+    z-index: 0; /* Placer derrière le contenu */
+}
+
+.board::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #ff918db9; /* Même couleur que le biscuit */
+    border-radius: 50%; /* Forme arrondie pour les vagues */
+    z-index: 0; /* Placer derrière le contenu */
+}
+
+
+
+/* Labels */
+.board label {
+    font-weight: 680;
+    letter-spacing: 0.01em;
+    color: #F89E32;
+    font-family: 'DynaPuff', cursive;
+}
+
+
+
+
+/* Importer les polices Pacifico et Quicksand depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap');
+
+/* Appliquer la police Pacifico à la classe .bienvenue-logo */
+.bienvenue-logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    color: #FF908D; 
+    /* #ff61a6 */
+    font-weight: bold;
+}
+
+/* Appliquer la police Quicksand au texte général du site */
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95em;
+    color: #424040;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+p:last-child {
+    font-style: italic;
+    color: #FF908D;
+}
+

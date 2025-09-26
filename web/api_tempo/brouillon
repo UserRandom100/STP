@@ -1,0 +1,27 @@
+<?php
+// Votre clé API Spoonacular
+$apiKey = '84717fd1fcc04e78978f44dd9a5c3977';  // Remplacez avec votre vraie clé API
+
+// Vérifiez si un paramètre "query" est passé
+$query = isset($_GET['query']) ? $_GET['query'] : 'poulet riz';  // Valeur par défaut si rien n'est spécifié
+
+// Affichez pour vérifier si la requête arrive
+var_dump($_GET);  // Vérifiez que vous obtenez bien le paramètre "query"
+
+// Encodage de la requête pour l'URL
+$query = urlencode($query);
+
+// URL de l'API pour rechercher les recettes
+$searchUrl = "https://api.spoonacular.com/recipes/complexSearch?query={$query}&apiKey={$apiKey}&language=fr";
+
+// Faire l'appel à l'API
+$response = file_get_contents($searchUrl);
+
+// Vérifiez si la requête a réussi
+if ($response === FALSE) {
+    die('Erreur de récupération des données de l\'API.');
+}
+
+// Retourner la réponse JSON au frontend
+echo $response;
+?>
