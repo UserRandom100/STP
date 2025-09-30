@@ -101,6 +101,11 @@ header {
   box-sizing: border-box;
 }
 
+.Logo a {
+  text-decoration: none; /* enlève le soulignement */
+  color: inherit; /* hérite de la couleur du parent */
+  display: block; /* utile pour agir comme un conteneur */
+}
 
 
 
