@@ -171,11 +171,11 @@ try {
             http_response_code(400); // Bad Request
             echo json_encode(array("message" => "Le fichier téléchargé n'est pas une image valide (JPEG seulement)."));
         }
-    } else {
+    } /* else {
         // Si aucun fichier n'est sélectionné ou une erreur d'upload
         http_response_code(400); // Bad Request
         echo json_encode(array("message" => "Aucun fichier image téléchargé ou erreur dans l'upload."));
-    }
+    } */
 
 
 
