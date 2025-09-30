@@ -49,7 +49,7 @@ function ajouterEtape(){
 
 function ajouterIngredient(nameIngrediant, quantiter){
     $.ajax({
-        url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/ingredient/rechercher_ingredients.php',
+        url: '../web/api_tempo/ingredient/rechercher_ingredients.php',
         method: 'GET',
         dataType: 'json',
         data:{query:nameIngrediant},
@@ -131,7 +131,7 @@ function ajouterRecette(){
         
         //envoie de la recette
         $.ajax({
-            url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/recipe/enregistrer_recette.php',
+            url: '../web/api_tempo/recipe/enregistrer_recette.php',
             method: 'POST',
             data: formData,
             processData: false,  // Important pour ne pas transformer les données
@@ -209,7 +209,7 @@ function modifierRecette(){
         
         //envoie de la recette
         $.ajax({
-            url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/recipe/sauvegarder_modification_recette.php',
+            url: '../web/api_tempo/recipe/sauvegarder_modification_recette.php',
             method: 'POST',
             data: formData,
             processData: false,  // Important pour ne pas transformer les données
@@ -229,7 +229,7 @@ function modifierRecette(){
 function afficherMenuModifier(id){
 
     $.ajax({
-        url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/recipe/recette_par_id.php',
+        url: '../web/api_tempo/recipe/recette_par_id.php',
         method: 'GET',
         dataType: 'json',
         data:{id_recette:id},
@@ -315,7 +315,7 @@ function afficherMenuModifier(id){
         
         //on vas chercher la liste des user possible et on la met dans un menue deroulant
         $.ajax({
-            url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/user/getAllUser.php',
+            url: '../web/api_tempo/user/getAllUser.php',
             method: 'GET',
             dataType: 'json', // Optionnel : si vous attendez du JSON
             success: function(response) {
@@ -342,7 +342,7 @@ function afficherMenuModifier(id){
 
         //on met la liste des ingrediant dans un menu deroulant
         $.ajax({
-            url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/ingredient/rechercher_ingredients.php',
+            url: '../web/api_tempo/ingredient/rechercher_ingredients.php',
             method: 'GET',
             dataType: 'json',
             data:{query:"%"},
@@ -450,7 +450,7 @@ function afficherRecettes(recettes) {
 }
 
 function chargerRecettes() {
-    $.getJSON(`http://localhost/SwipeTonSouper_MySQL/web/api_tempo/recipe/toutes_recettes.php?limit=${limit}&offset=${offset}`)
+    $.getJSON(`../web/api_tempo/recipe/toutes_recettes.php?limit=${limit}&offset=${offset}`)
         .done(function (data) {
             if (data.length === 0) {
                 $('#load-more').hide(); // Plus rien à charger
@@ -475,7 +475,7 @@ $(document).ready(function () {
 
         if (confirm("Voulez-vous vraiment supprimer cette recette ?")) {
             $.ajax({
-                url: "http://localhost/SwipeTonSouper_MySQL/web/api_tempo/recipe/suprimer_recette_par_id.php",
+                url: "../web/api_tempo/recipe/suprimer_recette_par_id.php",
                 type: "DELETE",
                 contentType: "application/json",
                 data: JSON.stringify({ id: recipeId }),

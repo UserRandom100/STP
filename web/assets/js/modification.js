@@ -51,7 +51,7 @@
 
 
         $.ajax({
-            url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/recipe/sauvegarder_modification_recette.php',
+            url: '../web/api_tempo/recipe/sauvegarder_modification_recette.php',
             method: 'POST',
             data: formData,
             processData: false,

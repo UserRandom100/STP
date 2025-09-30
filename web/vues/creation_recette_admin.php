@@ -79,7 +79,7 @@
             <select name="menu-deroulant" id="menu-deroulant">
                 <script>
                 $.ajax({
-                    url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/user/getAllUser.php',
+                    url: '../web/api_tempo/user/getAllUser.php',
                     method: 'GET',
                     dataType: 'json', // Optionnel : si vous attendez du JSON
                     success: function(response) {
@@ -134,7 +134,7 @@
             <select name="menu-deroulant-ingrediant" id="menu-deroulant-ingrediant">
                 <script>
                      $.ajax({
-                            url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/ingredient/rechercher_ingredients.php',
+                            url: '../web/api_tempo/ingredient/rechercher_ingredients.php',
                             method: 'GET',
                             dataType: 'json',
                             data:{query:"%"},

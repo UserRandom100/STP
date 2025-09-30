@@ -142,7 +142,7 @@
     <script>
         $(document).ready(function () {
             $.ajax({
-                url: "http://localhost/SwipeTonSouper_MySQL/web/api_tempo/recipe/toutes_recettes.php",
+                url: "../web/api_tempo/recipe/toutes_recettes.php",
                 type: "GET",
                 dataType: "json",
                 success: function (response) {
@@ -183,7 +183,7 @@
 
             if (confirm("Voulez-vous vraiment supprimer cette recette ?")) {
                 $.ajax({
-                    url: "http://localhost/SwipeTonSouper_MySQL/web/api_tempo/recipe/suprimer_recette_par_id.php",
+                    url: "../web/api_tempo/recipe/suprimer_recette_par_id.php",
                     type: "DELETE",
                     contentType: "application/json",
                     data: JSON.stringify({ id: recipeId }),
