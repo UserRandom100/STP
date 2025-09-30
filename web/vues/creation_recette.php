@@ -112,7 +112,7 @@
         // Rechercher seulement si la longueur du texte est > 2
         if (searchQuery.length > 2) {
           $.ajax({
-            url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/ingredient/rechercher_ingredients.php', // Ton URL API
+            url: '../web/api_tempo/ingredient/rechercher_ingredients.php', // Ton URL API
             method: 'GET',
             data: {
               query: searchQuery

@@ -263,7 +263,7 @@
         var searchQuery = $(this).val();
         if (searchQuery.length > 2) {
           $.ajax({
-            url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/ingredient/rechercher_ingredients.php',
+            url: '../web/api_tempo/ingredient/rechercher_ingredients.php',
             method: 'GET',
             data: {
               query: searchQuery

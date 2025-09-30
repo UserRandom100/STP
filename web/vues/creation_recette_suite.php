@@ -195,7 +195,7 @@
 
         // Envoi des données via AJAX avec FormData
         $.ajax({
-          url: 'http://localhost/SwipeTonSouper_MySQL/web/api_tempo/recipe/enregistrer_recette.php',
+          url: '../web/api_tempo/recipe/enregistrer_recette.php',
           method: 'POST',
           data: formData,
           processData: false, // Ne pas traiter les données (pour les fichiers)
